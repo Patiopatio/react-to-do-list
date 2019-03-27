@@ -5,8 +5,8 @@ class Form extends Component {
     super(props)
 
     this.initialiState = {
-      name: "",
-      job: "",
+      task: "",
+      note: "",
     }
 
     this.state = this.initialiState
@@ -22,21 +22,21 @@ class Form extends Component {
   }
 
   render() {
-    const {name, job} = this.state
+    const {task, note} = this.state
 
     return (
       <form>
-        <label>Name</label>
+        <label>Task</label>
         <input
         type="text"
-        name="name"
-        value={name}
+        name="task"
+        value={task}
         onChange={this.handleChange} />
-        <label>Job</label>
+        <label>Further Notes</label>
         <input
         type="text"
-        name="job"
-        value={job}
+        name="note"
+        value={note}
         onChange={this.handleChange} />
         <input type="button" value="Submit" onClick={this.submitForm} />
       </form>
