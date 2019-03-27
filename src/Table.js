@@ -29,7 +29,7 @@ const TableBody = props => {
     return (
       <tr key={index}>
         <td>{row.task}</td>
-        <td>{row.description}</td>
+        <td>{row.note}</td>
         <td>
           <button onClick={() => props.removeCharacter(index)}>Done</button>
         </td>
